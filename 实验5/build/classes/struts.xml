@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN"
+"http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+<constant name="struts.devMode" value="false"></constant>
+	<package name="default"  extends="struts-default" namespace="/">
+		<action name="login_*" class="com.loginAction" method="{1}">
+			<result name="success">/IntBook.jsp</result>
+			<result name="error">/login_error.jsp</result>
+			<result name="re_success">/registe_success.jsp</result>
+			<result name="re_error">/registe_error.jsp</result>
+		</action>
+		<action name="bookaction" class="com.Bookmassge">
+			<result name="success">/outBook.jsp</result>
+		</action>
+	</package>
+</struts>    
